@@ -396,5 +396,51 @@
         </ul>
       </div>
     </footer>
+
+    <!--وارد کردن کد های جاوا اسکریپت-->
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/mer-material.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".button-collapse").sideNav();
+        $(".parallax").parallax();
+        $(".slider").slider({
+          full_width: true,
+          indicators: true,
+          height: 500,
+          transition: 1000,
+          interval: 4000,
+        });
+        $("input#TA").characterCounter();
+        $(".dropdown-button").dropdown({
+          inDuration: 300,
+          outDuration: 200,
+          constrain_width: true,
+          gutter: 0,
+          belowOrigin: true,
+          alignment: "right",
+        });
+        $(".search-button").dropdown({
+          inDuration: 300,
+          outDuration: 200,
+          constrain_width: 1300,
+          gutter: 0,
+          belowOrigin: true,
+          alignment: "right",
+        });
+        $(".materialboxed").materialbox();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".carousel");
+        var instances = M.Carousel.init(elems, options);
+      });
+
+      // Or with jQuery
+
+      $(document).ready(function () {
+        $(".carousel").carousel();
+      });
+    </script>
   </body>
 </html>
